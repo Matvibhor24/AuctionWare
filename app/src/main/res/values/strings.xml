@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AuctionWare</string>
+    <string name="New_user"><b><u>New User? Sign Up!!</u></b></string>
 </resources>
