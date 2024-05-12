@@ -1,5 +1,6 @@
 package com.example.auctionware;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -70,6 +71,9 @@ public class SignUp extends AppCompatActivity {
                         if (task.isSuccessful()) {
 //                            FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(getApplicationContext(), "Authentication Success.", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(SignUp.this, HomePage.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), "Authentication failed.", Toast.LENGTH_SHORT).show();
                         }
