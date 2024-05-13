@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +21,7 @@ import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.util.Tex
 public class SignUp extends AppCompatActivity {
     EditText emailEditText, passwordEditText, repasswordEditText;
     Button signup;
+    ImageView backbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,15 @@ public class SignUp extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password);
         repasswordEditText = findViewById(R.id.repassword);
         signup = findViewById(R.id.signupbtn);
+
+        backbtn = findViewById(R.id.back);
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override

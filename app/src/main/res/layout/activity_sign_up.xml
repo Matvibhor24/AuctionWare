@@ -9,6 +9,14 @@
     android:background="#6833D4">
 
     <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon"
+        android:layout_margin="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
         android:id="@+id/titleimg"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
