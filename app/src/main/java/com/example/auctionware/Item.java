@@ -9,7 +9,7 @@ public class Item {
     private String prevBidder;
 
     public Item() {
-        // Default constructor required for Firebase
+        // Default constructor
     }
 
     public Item(String id, String name, String description, double currBid, double minBid, String prevBidder, String imageUrl) {
@@ -22,7 +22,6 @@ public class Item {
         this.imageUrl = imageUrl;
     }
 
-    // Getters and setters
     public String getName() {
         return name;
     }

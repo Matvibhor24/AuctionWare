@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- App bar -->
     <androidx.cardview.widget.CardView
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -14,12 +13,10 @@
         app:cardElevation="10dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Content of the app bar -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Back button -->
             <ImageView
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
@@ -30,7 +27,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
-            <!-- Heading -->
             <TextView
                 android:id="@+id/heading"
                 android:layout_width="wrap_content"
@@ -47,7 +43,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Content ScrollView -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -56,13 +51,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Content layout -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-            <!-- Image View -->
             <ImageView
                 android:id="@+id/img"
                 android:layout_width="230dp"
@@ -73,7 +66,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-            <!-- Name TextView -->
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
@@ -115,7 +107,7 @@
                 app:layout_constraintTop_toBottomOf="@id/desc"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
-            <!-- Current Bid TextView -->
+
             <TextView
                 android:id="@+id/currBid"
                 android:layout_width="0dp"
@@ -132,7 +124,6 @@
                 app:layout_constraintTop_toBottomOf="@id/bidder"
                 app:layout_constraintEnd_toStartOf="@id/currBidVal"/>
 
-            <!-- Current Bid Value TextView -->
             <TextView
                 android:id="@+id/currBidVal"
                 android:layout_width="0dp"
@@ -148,7 +139,6 @@
                 app:layout_constraintStart_toEndOf="@id/currBid"
                 app:layout_constraintTop_toBottomOf="@id/bidder" />
 
-            <!-- Minimum Bid TextView -->
             <TextView
                 android:id="@+id/minBid"
                 android:layout_width="0dp"

@@ -46,7 +46,6 @@ public class BiddingItemAdapter extends RecyclerView.Adapter<BiddingItemAdapter.
 
         Picasso.get().load(item.getImageUrl()).into(holder.item_img);
 
-        // Set click listener for item card
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

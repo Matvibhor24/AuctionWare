@@ -41,7 +41,7 @@ public class Login extends AppCompatActivity {
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
-            // User is already logged in, start the home activity
+            // User is already logged in
             startHomeActivity();
         }
 

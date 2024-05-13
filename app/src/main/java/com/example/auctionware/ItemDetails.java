@@ -63,7 +63,6 @@ public class ItemDetails extends AppCompatActivity {
         databaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                // Retrieve the item details
                 Item item = dataSnapshot.getValue(Item.class);
                 if (item != null) {
                     itemName = item.getName();
@@ -90,7 +89,7 @@ public class ItemDetails extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Handle error
+
                 Log.e("ItemDetailsActivity", "Failed to read item details.", databaseError.toException());
             }
         });

@@ -81,13 +81,12 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         refreshbtn = view.findViewById(R.id.refresh_button);
         recyclerView = view.findViewById(R.id.item_recycler_view);
 
         refresh();
-        // Find RecyclerView from the inflated layout
+
 
         refreshbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +96,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        // Return the inflated layout
         return view;
     }
     private void rotateRefreshButton() {
