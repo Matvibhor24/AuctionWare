@@ -119,6 +119,7 @@ public class HomeFragment extends Fragment {
                 List<Item> items = new ArrayList<>();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Item item = snapshot.getValue(Item.class);
+                    item.setId(snapshot.getKey());
                     items.add(item);
                 }
                 adapter.setItems(items);

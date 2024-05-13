@@ -39,7 +39,11 @@ public class Login extends AppCompatActivity {
         loginbtn = findViewById(R.id.loginbtn);
         new_user = findViewById(R.id.new_user);
 
-
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            // User is already logged in, start the home activity
+            startHomeActivity();
+        }
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,14 +84,18 @@ public class Login extends AppCompatActivity {
 //                            FirebaseUser user = mAuth.getCurrentUser();
 
                             Toast.makeText(getApplicationContext(), "Authentication Success.", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(Login.this, HomePage.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(intent);
+                            startHomeActivity();
 
                         } else {
                             Toast.makeText(getApplicationContext(), "Authentication failed.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+    }
+
+    public void startHomeActivity(){
+        Intent intent = new Intent(Login.this, HomePage.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }
