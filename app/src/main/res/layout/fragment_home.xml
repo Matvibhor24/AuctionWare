@@ -7,15 +7,15 @@
     tools:context=".HomeFragment"
     android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- AppBar -->
     <androidx.cardview.widget.CardView
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="#4b39ef"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -37,19 +37,21 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-     <TextView
-         android:id="@+id/heading"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="Latest Products"
-         android:textStyle="bold"
-         android:textSize="20dp"
-         android:textColor="@color/black"
-         android:layout_marginHorizontal="20dp"
-         android:layout_marginTop="20dp"
-         app:layout_constraintTop_toBottomOf="@id/appbar"
-         app:layout_constraintStart_toStartOf="parent"/>
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latest Products"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintStart_toStartOf="parent"/>
 
+    <!-- Refresh Button -->
     <ImageView
         android:id="@+id/refresh_button"
         android:layout_width="wrap_content"
@@ -62,13 +64,24 @@
         app:layout_constraintTop_toBottomOf="@id/appbar"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/item_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="20dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/heading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/heading"/>
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom_navigation" />
+
+    <!-- Guideline for Bottom Navigation -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9995" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
